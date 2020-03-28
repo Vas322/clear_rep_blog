@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b67v71@q8j%q+&_ny)ln^_(o5a(-u!8u)lwsu7d8$*nmc3$_#d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -133,8 +133,9 @@ if os.getcwd() == '/app':
     }
     # Поддержка заголовка 'X-Forwarded-Proto' для request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    # Разрешены все заголовки хостов.
-    ALLOWED_HOSTS = ['*']
+    # Хостом может быть только Heroku
+    ALLOWED_HOSTS = ['new-testing-heroku.herokuapp.com']
+    DEBUG = False
     # Конфигурация статических ресурсов
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
