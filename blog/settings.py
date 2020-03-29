@@ -123,6 +123,7 @@ LOGIN_URL = '/users/login/'
 BOOTSTRAP3 = {
     'include_jquery': True,
 }
+STATIC_ROOT = 'static'
 # Настройки Heroku
 if os.getcwd() == '/app':
     import dj_database_url
@@ -137,7 +138,7 @@ if os.getcwd() == '/app':
     DEBUG = False
     # Конфигурация статических ресурсов
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
+    STATIC_ROOT = 'static'
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
