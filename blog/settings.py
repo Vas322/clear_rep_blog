@@ -135,7 +135,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # Хостом может быть только Heroku
     ALLOWED_HOSTS = ['new-testing-heroku.herokuapp.com']
-    DEBUG = False
+    DEBUG = True
     # Конфигурация статических ресурсов
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'static'
